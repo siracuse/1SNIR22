@@ -1,7 +1,7 @@
 <?php
-// si on appuie sur le bouton "Envoyer" alors
+// si on appuie sur le bouton "Envoyer", alors
 if (isset($_POST['insert'])) {
-	//si les cookies 'fond' et 'texte' n'existe pas alors
+	//si les cookies 'fond' et 'texte' n'existe pas, alors
 	if (!isset($_COOKIE['fond']) and !isset($_COOKIE['texte'])) {
 		$fond = $_POST['fond'];
 		$texte = $_POST['texte'];
@@ -16,7 +16,7 @@ if (isset($_POST['insert'])) {
 	header('Refresh:0');
 }
 
-// si on appuie sur le bouton "Supprimer" alors
+// si on appuie sur le bouton "Supprimer", alors
 if (isset($_POST['delete'])) {
 	if (isset($_COOKIE['fond']) and isset($_COOKIE['texte'])) {
 		$expir = time() - 60;
